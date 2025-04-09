@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import formData from "../src/data/formData.json"
 
 export default function Dashboard() {
   const [semester, setSemester] = useState("")
@@ -9,28 +10,7 @@ export default function Dashboard() {
   const [copied, setCopied] = useState(false)
   const [authError, setAuthError] = useState(false)
 
-  const semesters = [
-    { id: "1st", name: "1st" },
-    { id: "2nd", name: "2nd" },
-    { id: "3rd", name: "3rd" },
-    { id: "4th", name: "4th" },
-    { id: "5th", name: "5th" },
-    { id: "6th", name: "6th" },
-    { id: "7th", name: "7th" },
-    { id: "8th", name: "8th" },
-  ]
-
-  const subjects = [
-    { id: "Introduction to Programming", name: "Introduction to Programming", semesters: ["1st", "2nd"] },
-    { id: "Engineering Mathematics", name: "Engineering Mathematics", semesters: ["1st", "2nd"] },
-    { id: "Data Structures", name: "Data Structures", semesters: ["3rd", "4th"] },
-    { id: "Operating Systems", name: "Operating Systems", semesters: ["4th", "5th"] },
-    { id: "Database Management Systems", name: "Database Management Systems", semesters: ["5th", "6th"] },
-    { id: "Machine Learning", name: "Machine Learning", semesters: ["6th", "7th"] },
-    { id: "Software Engineering", name: "Software Engineering", semesters: ["6th", "7th"] },
-    { id: "Cloud Computing", name: "Cloud Computing", semesters: ["7th", "8th"] },
-  ]
-
+  const {semesters, subjects} = formData;
   const filteredSubjects = semester
     ? subjects.filter((sub) => sub.semesters.includes(semester))
     : subjects

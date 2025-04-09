@@ -1,0 +1,39 @@
+
+{
+  "semesters": [
+    { "id": "1st", "name": "1st" },
+    { "id": "2nd", "name": "2nd" },
+    { "id": "3rd", "name": "3rd" },
+    { "id": "4th", "name": "4th" },
+    { "id": "5th", "name": "5th" },
+    { "id": "6th", "name": "6th" },
+    { "id": "7th", "name": "7th" },
+    { "id": "8th", "name": "8th" }
+  ],
+  "subjects": [
+    { "id": "Introduction to Programming", "name": "Introduction to Programming", "semesters": ["1st"] },
+    { "id": "Physics", "name": "Physics", "semesters": ["1st", "2nd"] },
+    { "id": "Chemistry", "name": "Chemistry", "semesters": ["1st", "2nd"] },
+    { "id": "English", "name": "English", "semesters": ["1st", "2nd"] },
+    { "id": "Mathematics", "name": "Mathematics", "semesters": ["1st", "2nd", "4th"] },
+    { "id": "Data Structures", "name": "Data Structures", "semesters": ["3rd"] },
+    { "id": "Logic Design", "name": "Logic Design", "semesters": ["3rd"] },
+    { "id": "Advance Java", "name": "Advance Java", "semesters": ["3rd"] },
+    { "id": "Operating Systems", "name": "Operating Systems", "semesters": ["3rd"] },
+    { "id": "DBMS", "name": "DBMS", "semesters": ["4th"] },
+    { "id": "Regression in Python", "name": "Regression in Python", "semesters": ["4th"] },
+    { "id": "DAA", "name": "DAA", "semesters": ["5th"] },
+    { "id": "Computer Networks", "name": "Computer Networks", "semesters": ["5th"] },
+    { "id": "Computer Organisation and Architecture", "name": "Computer Organisation and Architecture", "semesters": ["5th"] },
+    { "id": "Automata and Compiler Design", "name": "Automata and Compiler Design", "semesters": ["5th"] },
+    { "id": "Full Stack Development", "name": "Full Stack Development", "semesters": ["6th"] },
+    { "id": "GenAI", "name": "GenAI", "semesters": ["6th"] },
+    { "id": "DevOps", "name": "DevOps", "semesters": ["6th", "7th"] },
+    { "id": "Big Data", "name": "Big Data", "semesters": ["6th"] },
+    { "id": "Software Engineering", "name": "Software Engineering", "semesters": ["6th"] },
+    { "id": "Blockchain Technology", "name": "Blockchain Technology", "semesters": ["8th"] },
+    { "id": "Cyber Security", "name": "Cyber Security", "semesters": ["8th"] },
+    { "id": "Cloud Computing", "name": "Cloud Computing", "semesters": ["7th"] },
+    { "id": "AIML", "name": "AIML", "semesters": ["7th"] }
+  ]
+}
