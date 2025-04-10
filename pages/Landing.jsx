@@ -65,22 +65,21 @@ export default function LandingHero() {
       setTimeout(() => {
         setActiveStep((prev) => (prev + 1) % steps.length);
         setIsAnimating(false);
-      },1000); // Reduced from 500ms to 300ms for faster transitions
-    }, 5000); // Reduced from 3000ms to 2000ms for faster cycling
-
+      },3000);
+    }, 3000); 
     return () => clearInterval(interval);
   }, [steps.length]);
 
   return (
     <section className="relative overflow-hidden flex flex-col min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900">
-      {/* Animated background elements - faster animations */}
+      {/* Animated background elements */}
       <div className="absolute inset-0 w-full h-full opacity-20">
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(0,255,200,0.3),transparent_50%)] animate-[pulse_2s_ease-in-out_infinite]"></div>
         <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,rgba(120,0,255,0.3),transparent_50%)] animate-[pulse_2.5s_ease-in-out_infinite]"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_40%)] animate-[pulse_1.8s_ease-in-out_infinite]"></div>
       </div>
       
-      {/* Floating particles - faster animations */}
+      {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div 
@@ -91,8 +90,8 @@ export default function LandingHero() {
               height: `${Math.random() * 10 + 5}px`,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 5 + 5}s linear infinite`, // Faster animation (5-10s instead of 10-20s)
-              animationDelay: `${Math.random() * 2}s` // Shorter delay
+              animation: `float ${Math.random() * 5 + 5}s linear infinite`,
+              animationDelay: `${Math.random() * 2}s` 
             }}
           ></div>
         ))}
@@ -114,7 +113,7 @@ export default function LandingHero() {
           
           <p className="text-lg text-cyan-50/90 max-w-xl leading-relaxed">
             Create professional-grade forms in minutes, distribute them effortlessly, 
-            and analyze results directly in Google Sheets. Perfect for educators and researchers.
+            and analyze results directly in Google Forms. Perfect for educators and researchers.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -139,7 +138,6 @@ export default function LandingHero() {
                 onClick={() => login()}
                 className="group relative flex items-center justify-center gap-3 px-8 py-4 rounded-xl transition-all overflow-hidden"
               >
-                {/* Button background with gradient border */}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-[2px] bg-gradient-to-r from-cyan-900 to-emerald-900 rounded-lg"></div>
                 
@@ -152,8 +150,6 @@ export default function LandingHero() {
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
                 </div>
-                
-                {/* Button text */}
                 <span className="relative z-10 font-medium text-white hover:cursor-pointer">Continue with Google</span>
               </button>
             )}
@@ -196,7 +192,7 @@ export default function LandingHero() {
 
               {/* Content display area */}
               <div className="h-[240px] bg-gradient-to-br from-white/5 to-transparent rounded-2xl p-6 relative overflow-hidden border border-white/10 backdrop-blur-sm">
-                {/* Step content with animation - faster transition */}
+                {/* Step content */}
                 <div className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-emerald-400/20 flex items-center justify-center">
@@ -227,23 +223,10 @@ export default function LandingHero() {
               </div>
             </div>
           </div>
-          
-          {/* Decorative elements */}
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-cyan-400/30 to-emerald-400/30 rounded-full blur-2xl"></div>
           <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-purple-400/30 to-cyan-400/30 rounded-full blur-2xl"></div>
         </div>
       </div>
-      
-      {/* Add custom animation for floating particles - faster animation */}
-      <style jsx>{`
-        @keyframes float {
-          0% { transform: translateY(0) translateX(0); }
-          25% { transform: translateY(-15px) translateX(8px); }
-          50% { transform: translateY(-8px) translateX(15px); }
-          75% { transform: translateY(8px) translateX(-8px); }
-          100% { transform: translateY(0) translateX(0); }
-        }
-      `}</style>
     </section>
   );
 }

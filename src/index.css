@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-15px) translateX(8px); }
+  50% { transform: translateY(-8px) translateX(15px); }
+  75% { transform: translateY(8px) translateX(-8px); }
+  100% { transform: translateY(0) translateX(0); }
+}
